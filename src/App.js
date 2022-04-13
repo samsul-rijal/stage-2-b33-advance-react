@@ -7,6 +7,7 @@ import About from "./pages/About";
 import Profile from "./pages/Profile";
 import SignIn from "./pages/SignIn";
 import DetailUser from "./pages/DetailUser";
+import PrivateRoute from "./components/PrivateRoute";
 // import component here
 
 function App() {
@@ -28,9 +29,18 @@ function App() {
         </nav>
       </div>
       <Routes>
+
         <Route exact path="/" element={<Home />} />
         <Route exact path="/signin" element={<SignIn />} />
         {/* change route for page about, profile, and user:id to private route */}
+        
+        <Route path="/" element={<PrivateRoute />}>
+          <Route path="/about" element={<About />} />
+          <Route path="/profile" element={<Profile />} />
+          <Route path="/users/:id" element={<DetailUser />} />
+        </Route>
+
+      
       </Routes>
     </Router>
   );
