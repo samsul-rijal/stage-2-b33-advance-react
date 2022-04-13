@@ -7,6 +7,9 @@ import About from "./pages/About";
 import Profile from "./pages/Profile";
 import SignIn from "./pages/SignIn";
 // import component here
+import DetailUser from './pages/DetailUser'
+import Product from './pages/Product'
+import DetailPerson from "./pages/DetailPerson";
 
 function App() {
   return (
@@ -35,6 +38,9 @@ function App() {
         <Route exact path="/profile" element={<Profile />} />
         <Route exact path="/signin" element={<SignIn />} />
         {/* define new route */}
+        <Route exact path="/user/:id" element={<DetailUser />} />
+        <Route exact path="/person" element={<Product />} />
+        <Route exact path="/person/:id" element={<DetailPerson />} />
       </Routes>
     </Router>
   );

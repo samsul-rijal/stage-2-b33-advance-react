@@ -2,15 +2,19 @@ import { useEffect, useState } from "react";
 import { Container } from "react-bootstrap";
 
 // import necessary hooks from react-router-dom 
+import { useParams } from "react-router-dom";
 
 const DetailUser = () => {
   const [data, setData] = useState(null);
   
   // call that hooks here and store to variable
+  const params = useParams()
+  // const id = params.id
+  console.log(params.id);
 
   // don't worry about this, we'll cover later
   useEffect(() => {
-    fetch(`https://jsonplaceholder.typicode.com/users/${}`)
+    fetch(`https://jsonplaceholder.typicode.com/users/${params.id}`)
       .then((response) => response.json())
       .then((json) => setData(json));
     return () => {
@@ -23,6 +27,12 @@ const DetailUser = () => {
     // display information that stored in data 
     // console.log first to see what information that you get from fetching
     <Container className="text-center">
+      <h1>Data user with params</h1>
+      <p className="h2">{data?.name}</p>
+      <p>{data?.email}</p>
+      <p>{data?.phone}</p>
+      <p>{data?.website}</p>
+
     </Container>
   );
 };
