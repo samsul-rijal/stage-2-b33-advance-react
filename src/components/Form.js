@@ -1,6 +1,8 @@
 // import React Bootstrap components here
 import {Form, Row, Col} from 'react-bootstrap'
 
+import Dumbways from '../images/dw.png'
+
 // import css modules
 import cssModules from "./Form.module.css";
 
@@ -43,7 +45,7 @@ function FormComponent() {
             style={styles.formInput}
           />
         </div>
-        <div className={cssModules.formGroup}>
+        <div className={`bg-white ${cssModules.formGroup}`}>
           <label htmlFor="email" className={cssModules.formLabel}>
             Email
           </label>
@@ -92,6 +94,7 @@ function FormComponent() {
               <label htmlFor="" className='form-label'>City</label>
               <input type="text" className='form-control' />
             </div>
+            <img src={Dumbways} alt="" />
           </div>
 
       </form>
