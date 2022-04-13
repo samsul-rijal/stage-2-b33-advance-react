@@ -1,1 +1,23 @@
 /* style here */
+.form {
+    margin: 16px;
+}
+
+.formGroup {
+    margin-bottom: 16px;
+}
+
+.formLabel {
+    margin-bottom: 8px;
+    display: inline-block;
+}
+
+.formInput {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    font-size: 15px;
+    color: black;
+    border: 1px solid grey;
+    border-radius: 5px;
+}
