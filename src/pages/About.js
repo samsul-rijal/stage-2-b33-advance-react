@@ -1,4 +1,5 @@
 import { Container } from "react-bootstrap";
+import DetailAbout from "../components/DetailAbout";
 
 // import component
 
@@ -17,6 +18,7 @@ function About() {
         tortor.
       </p>
       {/* code here */}
+      <DetailAbout name="Febrisena" email="feb@mail.com"old={20} />
     </Container>
   );
 }
