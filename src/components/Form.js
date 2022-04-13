@@ -51,7 +51,15 @@ function Form() {
             className={cssModules.formInput}
           />
         </div>
-        {/* code here */}
+        {/* code here css global */}
+        <div className="form-group">
+          <label htmlFor="gender" className="form-label">Gender</label>
+          <select name="" id="gender" className="form-select">
+            <option value="">Choose..</option>
+            <option value="">Male</option>
+            <option value="">Female</option>
+          </select>
+        </div>
       </form>
     </div>
   )
